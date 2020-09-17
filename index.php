@@ -16,19 +16,19 @@
   <div class= "container">
   <div class= "row">
     <div class="col-6 coffee-list d-flex flex-column justify-content-around">
-      <div class="coffee-item" onclick="makeCoffee('Американо', 50)">
+      <div class="coffee-item" onclick="makeCoffee('Американо', 50, this)">
         <img src="img/americano.png" alt="Американо">
         <span>Американо - 50руб. </span>
       </div>
-      <div class="coffee-item" onclick="makeCoffee('Капучино', 73)">
+      <div class="coffee-item" onclick="makeCoffee('Капучино', 73, this)">
         <img src="img/cappuccino.png" alt="Капучино">
-        <span>Каппуччино - 73руб. </span>
+        <span>Капучино - 73руб. </span>
       </div>
-      <div class="coffee-item" onclick="makeCoffee('Эспрессо', 61)">
+      <div class="coffee-item" onclick="makeCoffee('Эспрессо', 61, this)">
         <img src="img/espresso.png" alt="Эспрессо">
         <span>Эспрессо - 61руб. </span>
       </div>
-      <div class="coffee-item" onclick="makeCoffee('Латте', 112)">
+      <div class="coffee-item" onclick="makeCoffee('Латте', 112, this)">
         <img src="img/latte.jpg" alt="Латте">
         <span>Латте - 112руб. </span>
       </div>
@@ -38,9 +38,9 @@
         <div class="col-6">
           <div class="display">
             <p class="display-text">Выберите кофе</p>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-            </div>
+           <div class="progress">
+             <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%; transition: none;"></div>
+           </div> 
   
           </div>
           <div class="cup-container">
@@ -57,15 +57,21 @@
             <div class="atm-container">
             <img src="img/bill_acc.png" alt="" class="atm">
         </div>
-<button class="btn btn-primary btn-block my-2">Сдача</button>  <!--кнопка на всю строку синяя-->
+<button class="btn btn-primary btn-block my-2 change-button">Сдача</button>  <!--кнопка на всю строку синяя-->
 <div class="change-container">
 </div>
-    
+    </div>
   </div>
  </div>
+ <div class="money">
+   <img src="img/50rub.jpg" alt="" data-cost="50">
+   <img src="img/100rub.jpg" alt="" data-cost="100">
+   <img src="img/500rub.jpg" alt="" data-cost="500">
+    </div>
  
     <!-- Optional JavaScript -->
-    <script src='script.js'</script> //подключаем script.js
+ 
+  <script src='script.js'></script> <!--подключаем script.js-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

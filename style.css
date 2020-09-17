@@ -52,8 +52,10 @@ padding: 1rem;
   margin-top: 2rem; /* отступ сверху */
 }
 
-cup {
+.cup {
   width: 100%       /* подровнять кружку под панель */
+  display: none; /*убран*/ 
+  opacity: 0; /*прозрачность*/
 }
 
 
@@ -66,4 +68,7 @@ cup {
   background-color: lightgrey;
   border: 2px solid black;
   border-radius: 0.5rem; 
+  position: relative; /*изменение*/
+  
+  
 }
